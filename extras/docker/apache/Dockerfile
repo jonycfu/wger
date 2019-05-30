@@ -35,9 +35,9 @@ RUN git clone https://github.com/wger-project/wger.git /home/wger/src
 
 WORKDIR /home/wger/src
 RUN virtualenv --python python3 /home/wger/venv
-RUN ls && pip --version 
+RUN ls ~/.cache/pip
 RUN . /home/wger/venv/bin/activate \
-    && pip install --upgrade pip \
+    && pip install --upgrade pip && pip --version \
     && pip install --upgrade --no-cache-dir -r requirements.txt \
     && python setup.py develop \
     && wger create_settings \
