@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: extras/docker/apache/Dockerfile
+run:
+  web: docker run -ti --name wger.devel --publish 8000:8000 wger/devel
