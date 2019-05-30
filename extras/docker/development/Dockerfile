@@ -10,7 +10,7 @@
 #
 
 
-FROM wger/base
+FROM wger/devel
 
 MAINTAINER Roland Geider <roland@geider.net>
 EXPOSE 8000
